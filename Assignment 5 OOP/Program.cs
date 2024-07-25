@@ -6,17 +6,14 @@ namespace Assignment_5_OOP
 
         static void Main(string[] args)
         {
-            // Read coordinates from user
             Point3D P1 = ReadPointFromUser("P1");
             Point3D P2 = ReadPointFromUser("P2");
 
-            // Check if points are equal
             if (P1 == P2)
                 Console.WriteLine("P1 and P2 are equal.");
             else
                 Console.WriteLine("P1 and P2 are not equal.");
 
-            // Define an array of points
             Point3D[] points = new Point3D[]
             {
             new Point3D(5, 6, 7),
@@ -25,7 +22,6 @@ namespace Assignment_5_OOP
             new Point3D(3, 2, 1)
             };
 
-            // Sort the array based on X and Y coordinates
             Array.Sort(points);
 
             Console.WriteLine("Sorted points:");
@@ -34,7 +30,6 @@ namespace Assignment_5_OOP
                 Console.WriteLine(point);
             }
 
-            // Clone a point
             Point3D clone = (Point3D)P1.Clone();
             Console.WriteLine($"Cloned point: {clone}");
         }
